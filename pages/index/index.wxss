@@ -1,0 +1,82 @@
+/**index.wxss**/
+loading{
+  position:absolute;
+  z-index: 5;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,.5)
+}
+.load{
+  width:200rpx;
+  height:200rpx;
+}
+.slide-image{
+  width:100%;
+  height:400rpx;
+}
+.scroll-view {
+  display: flex;
+  width: 100%; 
+  height: 250rpx;
+  margin-bottom: 20rpx;
+  white-space: nowrap;  
+  box-sizing: border-box;
+}
+
+.scroll-view-item {
+  overflow: hidden;
+  display: inline-block;
+  margin: 20rpx;
+  padding:20rpx;
+  border: 1px solid #ccc;
+  width: 640rpx;
+  height: 160rpx;
+}
+.tex{
+  overflow: hidden;
+  padding:20rpx;
+  border:1px solid #ccc;
+}
+.tex1{
+  float:left;
+  color:#027398;
+}
+.tex2{
+  float:right;
+  font-size:18px;
+  color:#027398;
+}
+.view-item-title{
+  width:360rpx;
+  font-size:14px;
+  float: left;
+  line-height: 25px;
+  white-space:normal;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.view-item-title:hover{
+  text-decoration:underline;
+}
+.view-item-image{
+  float: right;
+  width:190rpx;
+  height:200rpx;
+}
+.cont{
+  overflow: hidden;
+  width:100%;
+}
+.cont image{
+  float: left;
+  width: 330rpx;
+  margin-left: 30rpx;
+  margin-bottom: 30rpx;
+}
+.foot{
+  display: block;
+  margin:0 auto 30rpx;
+  text-align: center;
+  color:#808080;
+  font-size:14px;
+}

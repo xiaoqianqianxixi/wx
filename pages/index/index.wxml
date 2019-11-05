@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<loading hidden="{{loadingHidden}}">
+加载中....
+  <image class="load" src="http://a.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=6f62fa69932f07085f502204dc1494af/d53f8794a4c27d1e3aafd3e216d5ad6eddc4380f.jpg"></image>
+</loading>
+<swiper indicator-dots="indicatorDots"     
+        indicator-color="#fff"
+        indicator-active-color="#bc162c"
+        autoplay="{{autoplay}}"
+        interval="{{interval}}"
+        duration="{{duration}}"
+        circular="{{circular}}"
+>
+<!-- 
+indicator-dots  是否显示面板指示点
+indicator-color 指示点颜色
+indicator-active-color 当前选中的指示点颜色
+autoplay  是否自动切换
+interval  自动切换时间间隔
+duration  滑动动画时长
+ -->  
+ <block wx:for="{{imgUrls}}">
+  <swiper-item>
+    <image src="{{item.cover}}" class="slide-image">
+    </image>
+  </swiper-item>
+ </block>
+</swiper>
+<view class="tex"><text class="tex1">今日推荐</text><text class="tex2">*-*</text></view>
+<scroll-view class="scroll-view" scroll-x="true">
+    <view class="scroll-view-item"  wx:for="{{viewDatas}}" bindtap="recommend">
+      <text class="view-item-title">
+          <text>{{item.desc}}\n</text>
+      </text>
+      <image class="view-item-image" src="{{item.cover}} "></image>
+    </view>
+</scroll-view>
+<view class="cont">
+  <image 
+  wx:for="{{imgUrls2}}"
+   wx:for-index="index"
+    data-index="{{index}}"
+     src="{{item.url}}" 
+     lazy-load="true"
+      bindtap="preview" 
+      binderror="err"></image>
+</view>
+<text class="foot" wx:if="{{block}}">人家也是有底线的呢~~</text>
+
+

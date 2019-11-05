@@ -1,0 +1,35 @@
+/* pages/recommend/recommend.wxss */
+loading{
+  position:absolute;
+  z-index: 5;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,.5)
+}
+.load{
+  width:200rpx;
+  height:200rpx;
+}
+.title{
+  margin:30rpx 0;
+  width:100%;
+  color:#027398;
+  text-align: center;
+  font-size:18px;
+}
+.cont{
+  overflow: hidden;
+}
+.box{
+  float:left;
+  width:330rpx;
+  margin:30rpx 15rpx;
+}
+.box image{
+  width:100%;
+
+}
+.box text{
+  font-family: FangSong;
+  font-size:14px;
+}

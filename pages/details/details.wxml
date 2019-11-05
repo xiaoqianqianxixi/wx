@@ -1,0 +1,10 @@
+<!--pages/details/details.wxml-->
+<loading hidden="{{loadingHidden}}">
+加载中....
+  <image class="load" src="http://a.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=6f62fa69932f07085f502204dc1494af/d53f8794a4c27d1e3aafd3e216d5ad6eddc4380f.jpg"></image>
+</loading>
+<text class="title">{{value}}</text>
+<view class="cont">
+  <image wx:for="{{imgUrls2}}" wx:for-index="index" data-index="{{index}}" src="{{item.url}}" binderror="err" lazy-load="true" bindtap="preview" ></image>
+</view>
+<text class="foot">人家也是有底线的呢~~</text>

@@ -1,0 +1,14 @@
+<!--pages/recommend/recommend.wxml-->
+<loading hidden="{{loadingHidden}}">
+加载中....
+  <image class="load" src="http://a.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=6f62fa69932f07085f502204dc1494af/d53f8794a4c27d1e3aafd3e216d5ad6eddc4380f.jpg"></image>
+</loading>
+<view class="title">
+<text>原创作品</text>
+</view>
+<view class="cont">
+  <view class="box" wx:for="{{arr}}">
+    <text>作者:{{item.author}}</text>
+    <image src="{{item.img}}"></image>
+  </view>
+</view>

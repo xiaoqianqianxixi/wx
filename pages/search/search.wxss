@@ -1,0 +1,79 @@
+/* pages/search/search.wxss */
+loading{
+  position:absolute;
+  z-index: 5;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,.5)
+}
+.load{
+  width:200rpx;
+  height:200rpx;
+}
+.viewTop{
+  overflow: hidden;
+  width:730rpx;
+  height:140rpx;
+  margin:40rpx auto;
+  border-bottom: 1px solid #eee;
+}
+.inp{
+  float: left;
+  width:550rpx;
+  height:60rpx;
+  border:1px solid #ccc;
+  text-indent:20px;
+}
+.btn{
+  float: right;
+  width:135rpx;
+  height:60rpx;
+  line-height: 30px;
+  color:#fff;
+  background-color:#027398;
+}
+
+.popular,.marvellous{
+  display: block;
+  color:#808080;
+  font-size:18px;
+}
+.cont,.foot{
+  margin-top:20rpx;
+  padding:20rpx;
+}
+.label{
+  display: inline-block;
+  font-size:14px;
+  padding:5rpx 15rpx;
+  margin:10rpx;
+  background-color:#eee;
+  border-radius:5px;
+}
+.img{
+  float: left;
+  width:160rpx;
+  height:160rpx;
+  margin-right: 30rpx;
+}
+.block{
+  overflow: hidden;
+  width:550rpx;
+  height:160rpx;
+  padding:30rpx;
+}
+.textFoot{
+  float: left;
+  width:300rpx;
+}
+.title{
+  display: block;
+  color:#808080;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.sub{
+  font-size:14px;
+  color:#ccc;
+}
