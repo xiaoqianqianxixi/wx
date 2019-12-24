@@ -1,3 +1,4 @@
+
 // pages/details/details.js
 const app = getApp()
 Page({
@@ -5,8 +6,8 @@ Page({
   data: {
     imgUrls2: [],
     value: '',
+    src:"",
     pagenum:1,
-    options:"",
     loadingHidden: false
   },
   //点击图片预览
@@ -41,31 +42,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var str = options.value;
     
-    // console.log(options)
-    this.setData({
-      options: options
-    })
-    this.fn()
-},
-   
-  fn: function () {
-    var str = this.data.options.value;
-    var len = str.indexOf("手机");
+    var len=str.indexOf("手机");
     //var title=str.substring(0, len);
     if (str.indexOf("手机") != -1) {
-      str = this.data.options.value;
-
-    } else {
+      str = options.value;
+        
+    }else{
       str += "手机高清壁纸";
     }
-    var that = this;
+    var that=this;
     that.setData({
-      value: this.data.options.value
+      value: options.value,
+      src:str
     })
+    that.fn();
+    
+  },
+  fn:function(){
     var that = this;
     wx.request({
-      url: app.globalData.server1 + '/wallpaper/search/keyword/' + str + '/' + that.data.pagenum + '/10',
+      url: app.globalData.server1 + '/wallpaper/search/keyword/' + encodeURI(that.data.src) + '/' + that.data.pagenum + '/10',
       success: (res) => {
         var arr1 = that.data.imgUrls2;//从data获取当前datalist数组
         var arr2 = res.data.data;//从此次请求返回得数据中获取新数组
@@ -79,18 +77,16 @@ Page({
         console.log(err)
       }
     })
-    },
+  },
   onReachBottom: function () { //触底开始下一页
-   
+    var that = this;
     var page = 20;
-    var pagenum = this.data.pagenum + 10; //获取当前页数并+1
-    this.setData({
+    var pagenum = that.data.pagenum + 5; //获取当前页数并+1
+    that.setData({
       pagenum: pagenum, //更新当前页数
     })
     if (pagenum <= page) {
-      this.fn();//重新调用请求获取下一页数据 
-      //fn()
-      console.log(fn)
+      that.fn();//重新调用请求获取下一页数据
     } else {
       this.setData({
         block: true
@@ -99,3 +95,12 @@ Page({
 
   },
 })
+
+
+
+
+
+
+
+
+

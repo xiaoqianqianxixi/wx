@@ -1,3 +1,91 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 loading{
   position:absolute;
   z-index: 5;
@@ -87,21 +175,20 @@ border: none;
 .btn{
   margin:20rpx 0;
 }
-/* 弹出层 */
-.logBox{
-  position: absolute;
-  z-index: 999;
-  top:25%;
-  left:18%;
-  width:400rpx;
-  height:300rpx;
-  background-color:#fff;
-  box-shadow: 0px 0px 10px 1px;
-  padding:50rpx;
-}
-.xx{
-  position :absolute;
-  top:10px;
-  right:20px;
-  color:red;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

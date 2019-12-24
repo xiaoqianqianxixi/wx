@@ -1,3 +1,4 @@
+
 <loading hidden="{{loadingHidden}}">
 加载中....
   <image class="load" src="http://a.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=6f62fa69932f07085f502204dc1494af/d53f8794a4c27d1e3aafd3e216d5ad6eddc4380f.jpg"></image>
@@ -6,7 +7,7 @@
   <image src="{{userInfo.avatarUrl}}"></image>
   <text>{{userInfo.nickName}}</text>
 </view>
-<view class="about" bindtap="block">
+<view class="about">
   <view class="yuan"><image src="../../images/guayu.png"></image></view>
   <text class='tex'>关于我们</text>
   <text class="right"> >></text>
@@ -17,13 +18,13 @@
  
   <text class="right"> >></text>
 </view>
-<view class="logBox" wx:if="{{block}}">
-    <text>版本号:1.01</text>
-    <view class="xx" bindtap="none">X</view>
-  </view>
 <text class="popular">阁下也可以上传自己觉得nice的壁纸呢~
 </text>
+<button ></button>
 <button class="btn" bindtap="upload">上传</button>
 <view class="box">
   <image wx:for="{{imgarr}}" wx:for-index="index" data-index="{{index}}" src="{{item}}" lazy-load="true" bindtap="preview" ></image>
-</view> 
+</view>
+
+
+

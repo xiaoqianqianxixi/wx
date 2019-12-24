@@ -28,6 +28,7 @@ loading{
   float: right;
   width:135rpx;
   height:60rpx;
+  font-size: 14px;
   line-height: 30px;
   color:#fff;
   background-color:#027398;
